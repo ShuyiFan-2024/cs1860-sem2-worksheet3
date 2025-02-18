@@ -2,18 +2,18 @@ push constant 0
 pop local 0
 push consant 0
 pop local 1
-push constant 0
-pop local 2
 push argument 0
+pop local 2
+push local 2
 push constant 0
 eq
 if-goto ZERO
-push argument 0
+push local 2
 push constant 0
 lt
 if-goto NEGATIVE
 label LOOP
-push argument 0
+push local 2
 push local 0
 add
 pop local 0
@@ -22,14 +22,14 @@ push local 1
 add
 pop local 1
 push local 1
-push argument 0
+push local 2
 eq
 if-goto END
 goto LOOP
 
 
 label NEGATIVE
-push argument 0
+push local 2
 neg
 pop local 2
 goto LOOP
