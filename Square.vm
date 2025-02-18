@@ -13,6 +13,10 @@ push constant 0
 lt
 if-goto NEGATIVE
 label LOOP
+push local 1
+push local 2
+eq
+if-goto END
 push local 2
 push local 0
 add
@@ -21,10 +25,7 @@ push constant 1
 push local 1
 add
 pop local 1
-push local 1
-push local 2
-eq
-if-goto END
+
 goto LOOP
 
 
