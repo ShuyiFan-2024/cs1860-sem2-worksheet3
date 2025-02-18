@@ -1,6 +1,6 @@
 push constant 0
 pop local 0
-push consant 1
+push constant 1
 pop local 1
 push argument 0
 pop local 2
@@ -8,18 +8,17 @@ pop local 2
 push local 2
 push constant 0
 eq
-if-goto END
-
+if-goto END_LOOP
 push local 2
 push constant 0
 lt
-if-goto NEGATIVE
+if-goto NEG
 
-label LOOP
+label WHILE_LOOP
 push local 1
 push local 2
 gt
-if-goto END
+if-goto END_LOOP
 push local 0
 push local 2
 add
@@ -28,16 +27,13 @@ push local 1
 push constant 1
 add
 pop local 1
-goto LOOP
+goto WHILE_LOOP
 
-
-label NEGATIVE
+label NEG
 push local 2
 neg
 pop local 2
-goto LOOP
-label END
+goto WHILE_LOOP
+
+label END_LOOP
 push local 0
-
-
-
