@@ -1,13 +1,13 @@
 push constant 0
 pop local 0
-push consant 0
+push consant 1
 pop local 1
 push argument 0
 pop local 2
 push local 2
 push constant 0
 eq
-if-goto ZERO
+if-goto END
 push local 2
 push constant 0
 lt
@@ -34,8 +34,6 @@ push local 2
 neg
 pop local 2
 goto LOOP
-label ZERO
-push constant 0
 label END
 push local 0
 
