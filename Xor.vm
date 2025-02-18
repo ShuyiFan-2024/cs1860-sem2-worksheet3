@@ -1,0 +1,9 @@
+push argument 0
+push argument 1
+or
+push argument 0
+push argument 1
+and
+not
+and
+pop argument 2
