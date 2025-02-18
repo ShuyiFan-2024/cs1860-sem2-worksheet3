@@ -36,6 +36,7 @@ goto LOOP
 label ZERO
 push constant 0
 label END
+push local 0
 
 
 
